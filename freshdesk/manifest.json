@@ -12,5 +12,9 @@
   },
   "whitelisted-domains": [
     "https://*.freshdesk.com"
-  ]
+  ],
+  "engines": {
+    "node": "14.16.1",
+    "fdk": "8.0.1"
+  }
 }
