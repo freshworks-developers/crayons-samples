@@ -1,11 +1,18 @@
-.logo {
-  background: url('freshdesk_logo.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 25px;
-  margin-top: 25px;
+html {
+  box-sizing: border-box;
 }
 
-.padding{
-  padding: 1rem 1rem;
+*,
+*:after,
+*::before {
+  box-sizing: inherit;
 }
+
+.main {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
