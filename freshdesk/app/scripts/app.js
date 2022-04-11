@@ -1,10 +1,49 @@
 var client;
+var data = {
+  columns: [
+    {
+      key: 'name',
+      text: 'Name'
+    },
+    {
+      key: 'group',
+      text: 'Group'
+    },
+    {
+      key: 'role',
+      text: 'Role'
+    }
+  ],
+  persons: [
+    {
+      id: '1234',
+      name: 'Alexander Goodman',
+      role: 'Illustrator',
+      group: 'Creative'
+    },
+    {
+      id: '2345',
+      name: 'Ambrose Wayne',
+      role: 'Director',
+      group: 'Management'
+    },
+    {
+      id: '3456',
+      name: 'August hines',
+      role: 'Sales',
+      group: 'Sales'
+    }
+  ]
+};
 
 init();
 
 async function init() {
   client = await app.initialized();
   client.events.on('app.activated', loadValidationScript);
+  let datatable = document.getElementById('datatable');
+  datatable.columns = data.columns;
+  datatable.rows = data.persons;
 }
 
 async function loadValidationScript() {
