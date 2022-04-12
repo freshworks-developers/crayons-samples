@@ -4,13 +4,96 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script async type="module" src="https://unpkg.com/@freshworks/crayons@v2/dist/crayons/crayons.esm.js"></script>
-    <script async nomodule src="https://unpkg.com/@freshworks/crayons@v2/dist/crayons/crayons.js"></script>
+    <script async type="module" src="https://unpkg.com/@freshworks/crayons/dist/crayons/crayons.esm.js"></script>
+    <script async nomodule src="https://unpkg.com/@freshworks/crayons/dist/crayons/crayons.js"></script>
     <link rel="stylesheet" href="./styles.css" />
     <title>Learning Crayons</title>
   </head>
   <body>
-    <h1>Let's start</h1>
+    <section class="main">
+      <fw-tabs class="form" active-tab-index="0">
+        <fw-tab tab-header="Scooby-Doo">
+          <fw-input
+            label="Name"
+            icon-left="add-contact"
+            state-text="Do not enter your user ID"
+            state="warning"
+            placeholder="Enter your official name"
+            required
+            clear-input
+            class="input"
+          >
+          </fw-input>
+          <fw-select multiple label="Favourite game" required="true" class="select">
+            <fw-select-option value="football">Football</fw-select-option>
+            <fw-select-option value="cricket">Cricket</fw-select-option>
+            <fw-select-option value="hockey">Hockey</fw-select-option>
+          </fw-select>
+          <fw-label value="Date of Birth" color="green"></fw-label> <br />
+          <fw-datepicker date-format="DD-MM-YYYY" class="datepicker"></fw-datepicker> <br />
+          <fw-checkbox checked="true" disabled="true" value="TnC" class="checkbox">Terms and Conditions</fw-checkbox>
+          <br />
+          <fw-dropdown-button
+            searchable
+            label="Choose a city"
+            placeholder="Choose a Metropolitan city"
+            class="dropdown"
+          >
+            <div slot="dropdown-options">
+              <option id="1" value="Chennai">Chennai</option>
+              <option id="2" value="Paris">Paris</option>
+              <option id="3" value="Washington">Washington</option>
+              <option id="4" value="Tokyo">Tokyo</option>
+              <option id="5" value="Berlin">Berlin</option>
+              <option id="6" value="London">London</option>
+            </div>
+          </fw-dropdown-button>
+          <br />
+          <br />
+          <fw-radio-group name="Genere" class="radio-group"
+            >Genere <br />
+            <fw-radio value="Sports" class="radio-button">Sports</fw-radio>
+            <fw-radio value="Music" class="radio-button">Music</fw-radio>
+            <fw-radio value="Movies" class="radio-button">Movies</fw-radio>
+            <fw-radio value="Reels" class="radio-button">Reels</fw-radio>
+            <br />
+          </fw-radio-group>
+          <fw-button color="Primary" class="submit-btn">Submit</fw-button>
+          <fw-button color="secondary" class="cancel-btn">Cancel</fw-button> <br />
+          <fw-button color="link" class="learn-more-btn" expand>Learn more details</fw-button>
+        </fw-tab>
+        <fw-tab tab-header="Boo-Boo Bear">
+          <br />
+          <fw-textarea label="Text area" state-text="Hint: Avoid using !@#$%^" class="text-area"></fw-textarea>
+          <fw-toggle size="small" class="toggle"></fw-toggle> Toggle Button<br /><br />
+          <fw-button modal-trigger-id="custom" class="know-btn"> Did you know? </fw-button>
+          <fw-modal id="custom" title-text="Modal" icon="bulb" description="using crayons" class="modal" custom-footer>
+            You can open up a modal with crayons!
+            <span slot="footer">
+              <p>You can add footer too</p>
+            </span>
+          </fw-modal>
+          <fw-toast id="toast"></fw-toast>
+          <fw-button class="toast-btn">Send a Toast!</fw-button>
+        </fw-tab>
+      </fw-tabs>
+      <article class="observations">
+        <fw-spinner size="large" class="spinner"></fw-spinner><br />
+        <table>
+          <thead>
+            <tr>
+              <th>Observing...</th>
+            </tr>
+          </thead>
+          <tbody class="table">
+            <tr>
+              <td><b>Emitted Event </b></td>
+              <td><b> Component </b></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
   </body>
   <script defer src="./script.js"></script>
 </html>
