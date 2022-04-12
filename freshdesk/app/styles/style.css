@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*::before {
+  box-sizing: inherit;
+}
+
+body{
+  padding: 5rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 1rem;
+  grid-row-gap: 1rem;
+  place-items: stretch;
+}
+
+.one{
+  grid-column: 0/1;
+  grid-row: 0/1;
+
+}
+
+.three{
+  grid-column: 3 / 4;
+  max-width: 50rem;
+}
+
+.two{
+  grid-column: 2/3;
+  justify-self: center;
+}

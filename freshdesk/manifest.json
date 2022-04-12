@@ -4,13 +4,15 @@
     "freshdesk": {
       "location": {
         "full_page_app": {
-          "url": "template.html",
-          "icon": "icon.svg"
+          "url": "index.html",
+          "icon": "styles/app-icon.svg"
         }
       }
     }
   },
-  "whitelisted-domains": [
-    "https://*.freshdesk.com"
-  ]
+  "whitelisted-domains": ["https://*.freshdesk.com"],
+  "engines": {
+    "node": "14.16.1",
+    "fdk": "8.0.1"
+  }
 }
