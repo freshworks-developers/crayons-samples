@@ -9,7 +9,7 @@ git clone git@github.com:freshworks-developers/crayons-samples.git
 # move to `web/` directory
 cd web/
 
-# start a local server
+# start a local server || ensure you have node.js v10+ installed
 npx http-server
 
 # Open the browser over the port generated :8080
