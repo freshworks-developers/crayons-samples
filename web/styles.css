@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 0.8rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.2rem 0.2rem;
+  justify-items: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.form {
+  grid-column: 1 / 2;
+  grid-row: 1 /2;
+}
+
+.observations {
+  grid-column: 2/3;
+  grid-row: 1 / 2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  list-style: none;
+}
