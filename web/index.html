@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A Crayons Sample - Web</title>
-  </head>
-  <body>
-    <h3>See</h3>
 
-    <ol>
-      <li><a href="./events.html">Events</a></li>
-      <li><a href="./properties.html">Properties</a></li>
-    </ol>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/@freshworks/crayons@v3/css/crayons-min.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <title>A Crayons Sample - Web</title>
+</head>
+
+<body>
+  <section class="strip-one fw-flex fw-flex-row fw-justify-between">
+    <h1 class="fw-p-16">Join Marvel Universe
+      <fw-label value="Registration Form"> </fw-label>
+    </h1>
+
+    <fw-menu class="fw-flex-grow-0" style="--fw-menu-max-width:300px; width: 30rem;">
+      <fw-menu-item>
+        <fw-icon name="at-the-rate"></fw-icon>
+        Login
+      </fw-menu-item>
+      <fw-menu-item>
+        <fw-icon name="close"></fw-icon>
+        Signup
+      </fw-menu-item>
+    </fw-menu>
+  </section>
+
+  <section class="fw-flex fw-flex-column fw-p-16" style="max-width:20rem;">
+    <fw-input label="Super Hero Name" value="Ironman"></fw-input>
+    <fw-file-uploader id="file-uploader-1" muliple="false" class="fw-p-8" text="Upload SuperHero Profile">
+    </fw-file-uploader>
+    <fw-button file-uploader-id="file-uploader-1">Upload file</fw-button>
+  </section>
+</body>
+
+
+<script async type="module" src="https://unpkg.com/@freshworks/crayons@v3/dist/crayons/crayons.esm.js">
+</script>
+<script async nomodule src="https://unpkg.com/@freshworks/crayons@v3/dist/crayons/crayons.js">
+</script>
+
 </html>
