@@ -1,17 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A Crayons Sample - Web</title>
-  </head>
-  <body>
-    <h3>See</h3>
 
-    <ol>
-      <li><a href="./events.html">Events</a></li>
-      <li><a href="./properties.html">Properties</a></li>
-    </ol>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/@freshworks/crayons@v3/css/crayons-min.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <title>A Crayons Sample - Web</title>
+</head>
+
+<body>
+  <fw-inline-message open type="info" class="fw-p-4">Registration is open for anyone aged less than 18
+  </fw-inline-message>
+
+  <section class="strip-one fw-flex fw-flex-row fw-justify-between">
+    <fw-toast id="type_toast"></fw-toast>
+
+    <h1 class="fw-p-16 fw-type-h1">Join Marvel Universe
+      <fw-label value="Registration Form"> </fw-label>
+    </h1>
+
+    <fw-menu class="fw-flex-grow-0" style="--fw-menu-max-width:300px; width: 20rem;">
+      <fw-menu-item>
+        <fw-icon name="at-the-rate"></fw-icon>
+        Login
+      </fw-menu-item>
+      <fw-menu-item>
+        <fw-icon name="close"></fw-icon>
+        Signup
+      </fw-menu-item>
+    </fw-menu>
+  </section>
+
+  <div class="fw-flex fw-flex-row fw-justify-between">
+    <section class="fw-flex fw-flex-column fw-p-16 fw-m-28 " style="width:30rem;">
+      <fw-input label="Super Hero Name" value="Ironman"></fw-input>
+      <fw-file-uploader id="file-uploader-1" muliple="false" class="fw-p-8" text="Upload SuperHero Profile">
+      </fw-file-uploader>
+      <fw-button file-uploader-id="file-uploader-1" color="link">Upload file</fw-button>
+      <fw-pill color="blue" class="fw-m-8">
+        <fw-icon name="info" slot="icon"></fw-icon>
+        Personal Information
+      </fw-pill>
+      <fw-textarea cols=40 rows=5 maxlength=75 minlength=5 label="Address"
+        warning-text="Do not enter your temporary address" state="warning" placeholder="Enter your permanent address"
+        required>
+      </fw-textarea>
+
+    </section>
+
+    <section class="fw-flex fw-flex-column fw-p-16 fw-m-28" style="width:30rem;">
+      <h3 class="fw-type-h3">Order the following with highest super power</h3>
+      <fw-pill color="green">
+        <fw-icon name="add-contact" slot="icon"></fw-icon>
+        New
+      </fw-pill>
+      <fw-drag-container class="drag-container" id="defaultSort">
+        <fw-drag-item>Ironman</fw-drag-item>
+        <fw-drag-item>Captain America</fw-drag-item>
+        <fw-drag-item>Black Widow</fw-drag-item>
+        <fw-drag-item>Thor</fw-drag-item>
+        <fw-drag-item>Hulk</fw-drag-item>
+        <fw-drag-item>Spiderman</fw-drag-item>
+        <fw-drag-item>Thanos<fw-icon slot="suffix" name="bulb"></fw-icon>
+        </fw-drag-item>
+      </fw-drag-container>
+      <fw-tooltip content="This will submit your application to Marvel Authors!">
+        <fw-button
+          onclick="document.querySelector('#type_toast').trigger({type:'success', content: 'Application to become Avenger is successfully submitted!'})">
+          Apply Now!
+        </fw-button>
+      </fw-tooltip>
+    </section>
+
+    <section class="fw-flex fw-flex-column" style="width:30rem;">
+      <fw-accordion expanded class="fw-mr-16 fw-type-base">
+        <fw-accordion-title>MCU's Avengers</fw-accordion-title>
+        <fw-accordion-body>
+          The Avengers are a fictional team of superheroes and the protagonists of the Marvel Cinematic Universe (MCU)
+          media franchise, based on the Marvel Comics team of the same name created by Stan Lee and Jack Kirby in 1963.
+          Founded by S.H.I.E.L.D. Director Nick Fury, the team is a United States-based organization composed primarily
+          of superpowered and gifted individuals, described as "Earth's Mightiest Heroes", who are committed to the
+          world's
+          protection from
+          a variety of threats. The Avengers are depicted as operating in the state of New York; originally operating
+          from the
+          Avengers Tower in Midtown Manhattan and subsequently from the Avengers Compound in Upstate New York.
+
+          The concept of the Avengers was teased in the post-credits scene of Iron Man (2008), the first MCU film, by
+          Nick Fury as an initiative planned by him. The concept was further explored in Iron Man 2 (2010), with the
+          introduction of
+          Natasha Romanoff. The team was eventually established in the crossover-style film The Avengers (2012), which,
+          followed
+          by Avengers: Age of Ultron (2015), Avengers: Infinity War (2018) and Avengers: Endgame (2019), established a
+          series of four films that headlined the MCU and became the sixth highest-grossing film series of all time,
+          with the MCU
+          franchise overall ranking first. Arranged as an ensemble of core MCU characters such as Iron Man, Captain
+          America and
+          Thor, they are central to the MCU's Infinity Saga and have been acclaimed as an important part of the
+          franchise.
+        </fw-accordion-body>
+      </fw-accordion>
+    </section>
+  </div>
+</body>
+
+
+<script async type="module" src="https://unpkg.com/@freshworks/crayons@v3/dist/crayons/crayons.esm.js">
+</script>
+<script async nomodule src="https://unpkg.com/@freshworks/crayons@v3/dist/crayons/crayons.js">
+</script>
+
 </html>
