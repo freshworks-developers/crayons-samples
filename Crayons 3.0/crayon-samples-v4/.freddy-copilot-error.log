@@ -1,0 +1,31 @@
+
+      --------------------------------------
+      Error Stack:: "AxiosError: Request failed with status code 400\n\tat De (c:\\Users\\singh\\.vscode\\extensions\\freshworksmarketplace.freddy-copilot-2.2.1\\dist\\extension.js:2:152583)\n\tat v.<anonymous> (c:\\Users\\singh\\.vscode\\extensions\\freshworksmarketplace.freddy-copilot-2.2.1\\dist\\extension.js:2:163797)\n\tat v.emit (node:events:526:35)\n\tat v.emit (node:domain:488:12)\n\tat v._processResponse (c:\\Users\\singh\\.vscode\\extensions\\freshworksmarketplace.freddy-copilot-2.2.1\\dist\\extension.js:2:49588)\n\tat ClientRequest._onNativeResponse (c:\\Users\\singh\\.vscode\\extensions\\freshworksmarketplace.freddy-copilot-2.2.1\\dist\\extension.js:2:44660)\n\tat Object.onceWrapper (node:events:629:26)\n\tat ClientRequest.emit (node:events:526:35)\n\tat ClientRequest.emit (node:domain:488:12)\n\tat HTTPParser.parserOnIncomingClient [as onIncoming] (node:_http_client:693:27)\n\tat HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)\n\tat TLSSocket.socketOnData (node:_http_client:535:22)\n\tat TLSSocket.emit (node:events:514:28)\n\tat TLSSocket.emit (node:domain:488:12)\n\tat addChunk (node:internal/streams/readable:376:12)\n\tat readableAddChunk (node:internal/streams/readable:349:9)\n\tat Readable.push (node:internal/streams/readable:286:10)\n\tat TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)"
+      Error Message:: "Request failed with status code 400"
+      Error Name:: "AxiosError"
+      Request ID:: 9f3e016c-75cd-4625-8557-264ef68baba0
+      Tokens Remaining:: 180201
+      Env:: release
+      API Route:: /api/v1/copilot/completions/platform/3
+      
+      
+
+      Timestamp:: Wed, 17 Jul 2024 07:04:28 GMT
+      Extension Version:: 2.2.1
+      --------------------------------------
+    
+      --------------------------------------
+      Error Stack:: "completions"
+      Error Message:: "You have exceeded the number of allowed characters in the request, please reduce the size of your query"
+      
+      
+      
+      
+      
+      
+      
+
+      Timestamp:: Wed, 17 Jul 2024 07:04:28 GMT
+      Extension Version:: 2.2.1
+      --------------------------------------
+    

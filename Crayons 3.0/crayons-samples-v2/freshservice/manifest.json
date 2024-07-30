@@ -1,0 +1,19 @@
+{
+  "platform-version": "2.3",
+  "product": {
+    "freshservice": {
+      "events": {
+        "onTicketCreate": {
+          "handler": "sendTicketCreationInfo"
+        }
+      },
+      "requests": {
+        "createTicket": {}
+      }
+    }
+  },
+  "engines": {
+    "node": "18.17.1",
+    "fdk": "9.0.8"
+  }
+}

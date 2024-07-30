@@ -1,0 +1,16 @@
+{
+  "Freshteam_api_key": {
+    "display_name": "Freshteam API Key",
+    "description": "Please enter your Freshteam API key. You can find it in the profile section page.",
+    "type": "text",
+    "required": true,
+    "secure": true
+  },
+  "Freshteam_subdomain": {
+    "display_name": "Freshteam Sub-domain",
+    "description": "Please enter your Freshteam sub-domain. It's in the URL, the name which appears before (.Freshteam.com) in the URL. For ex: In `xyz.Freshteam.com`, `xyz` is the subdomain",
+    "type": "url",
+    "required": true
+  }
+}
+

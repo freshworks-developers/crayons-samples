@@ -1,0 +1,24 @@
+{
+    "createTicket": {
+      "schema": {
+        "method": "POST",
+        "host": "<%= iparam.freshdesk_subdomain %>.freshdesk.com",
+        "path": "/api/v2/tickets",
+        "headers": {
+          "Authorization": "Basic <%= encode(iparam.freshdesk_api_key) %>",
+          "Content-Type": "application/json;charset=utf-8"
+        }
+      }
+    },
+    "sendToExternalAPI": {
+      "schema": {
+        "method": "POST",
+        "host": "<%= iparam.ext_domain %>.example.com",
+        "path": "/api/",
+        "headers": {
+          "Authorization": "Bearer <%= iparam.ext_apikey %>",
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  }

@@ -1,0 +1,16 @@
+{
+  "platform-version": "3.0",
+  "modules": {
+    "support_ticket": {
+      "events": {
+        "onTicketCreate": {
+          "handler": "sendTicketCreationInfo"
+        }
+      }
+    }
+  },
+  "engines": {
+    "node": "18.20.3",
+    "fdk": "9.1.1"
+  }
+}

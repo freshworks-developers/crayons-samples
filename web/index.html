@@ -5,79 +5,79 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://unpkg.com/@freshworks/crayons@v3/css/crayons-min.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/@freshworks/crayons@v3/css/crayons-min.css"> -->
   <link rel="stylesheet" href="./styles/index.css">
   <title>A Crayons Sample - Web</title>
 </head>
 
 <body>
-  <fw-inline-message open type="info" class="fw-p-4">Registration is open for anyone aged less than 18
-  </fw-inline-message>
+  <fwc-inline-message open type="info" class="fwc-p-4">Registration is open for anyone aged less than 18
+  </fwc-inline-message>
 
-  <section class="strip-one fw-flex fw-flex-row fw-justify-between">
-    <fw-toast id="type_toast"></fw-toast>
+  <section class="strip-one fwc-flex fwc-flex-row fwc-justify-between">
+    <fwc-toast id="type_toast"></fwc-toast>
 
-    <h1 class="fw-p-16 fw-type-h1">Join Marvel Universe
-      <fw-label value="Registration Form"> </fw-label>
+    <h1 class="fwc-p-16 fwc-type-h1">Join Marvel Universe
+      <fwc-label value="Registration Form"> </fwc-label>
     </h1>
 
-    <fw-menu class="fw-flex-grow-0" style="--fw-menu-max-width:300px; width: 20rem;">
-      <fw-menu-item>
-        <fw-icon name="at-the-rate"></fw-icon>
+    <fwc-menu class="fwc-flex-grow-0" style="--fwc-menu-max-width:300px; width: 20rem;">
+      <fwc-menu-item>
+        <fwc-icon name="at-the-rate"></fwc-icon>
         Login
-      </fw-menu-item>
-      <fw-menu-item>
-        <fw-icon name="close"></fw-icon>
+      </fwc-menu-item>
+      <fwc-menu-item>
+        <fwc-icon name="close"></fwc-icon>
         Signup
-      </fw-menu-item>
-    </fw-menu>
+      </fwc-menu-item>
+    </fwc-menu>
   </section>
 
-  <div class="fw-flex fw-flex-row fw-justify-between">
-    <section class="fw-flex fw-flex-column fw-p-16 fw-m-28 " style="width:30rem;">
-      <fw-input label="Super Hero Name" value="Ironman"></fw-input>
-      <fw-file-uploader id="file-uploader-1" muliple="false" class="fw-p-8" text="Upload SuperHero Profile">
-      </fw-file-uploader>
-      <fw-button file-uploader-id="file-uploader-1" color="link">Upload file</fw-button>
-      <fw-pill color="blue" class="fw-m-8">
-        <fw-icon name="info" slot="icon"></fw-icon>
+  <div class="fwc-flex fwc-flex-row fwc-justify-between">
+    <section class="fwc-flex fwc-flex-column fwc-p-16 fwc-m-28 " style="width:30rem;">
+      <fwc-input label="Super Hero Name" value="Ironman"></fwc-input>
+      <fwc-file-uploader id="file-uploader-1" multiple="false" class="fwc-p-8" text="Upload SuperHero Profile">
+      </fwc-file-uploader>
+      <fwc-button file-uploader-id="file-uploader-1" color="link">Upload file</fwc-button>
+      <fwc-pill color="blue" class="fwc-m-8">
+        <fwc-icon name="info" slot="icon"></fwc-icon>
         Personal Information
-      </fw-pill>
-      <fw-textarea cols=40 rows=5 maxlength=75 minlength=5 label="Address"
+      </fwc-pill>
+      <fwc-textarea cols=40 rows=5 maxlength=75 minlength=5 label="Address"
         warning-text="Do not enter your temporary address" state="warning" placeholder="Enter your permanent address"
         required>
-      </fw-textarea>
+      </fwc-textarea>
 
     </section>
 
-    <section class="fw-flex fw-flex-column fw-p-16 fw-m-28" style="width:30rem;">
-      <h3 class="fw-type-h3">Order the following with highest super power</h3>
-      <fw-pill color="green">
-        <fw-icon name="add-contact" slot="icon"></fw-icon>
+    <section class="fwc-flex fwc-flex-column fwc-p-16 fwc-m-28" style="width:30rem;">
+      <h3 class="fwc-type-h3">Order the following with highest super power</h3>
+      <fwc-pill color="green">
+        <fwc-icon name="add-contact" slot="icon"></fwc-icon>
         New
-      </fw-pill>
-      <fw-drag-container class="drag-container" id="defaultSort">
-        <fw-drag-item>Ironman</fw-drag-item>
-        <fw-drag-item>Captain America</fw-drag-item>
-        <fw-drag-item>Black Widow</fw-drag-item>
-        <fw-drag-item>Thor</fw-drag-item>
-        <fw-drag-item>Hulk</fw-drag-item>
-        <fw-drag-item>Spiderman</fw-drag-item>
-        <fw-drag-item>Thanos<fw-icon slot="suffix" name="bulb"></fw-icon>
-        </fw-drag-item>
-      </fw-drag-container>
-      <fw-tooltip content="This will submit your application to Marvel Authors!">
-        <fw-button
+      </fwc-pill>
+      <fwc-drag-container class="drag-container" id="defaultSort">
+        <fwc-drag-item>Ironman</fwc-drag-item>
+        <fwc-drag-item>Captain America</fwc-drag-item>
+        <fwc-drag-item>Black Widow</fwc-drag-item>
+        <fwc-drag-item>Thor</fwc-drag-item>
+        <fwc-drag-item>Hulk</fwc-drag-item>
+        <fwc-drag-item>Spiderman</fwc-drag-item>
+        <fwc-drag-item>Thanos<fwc-icon slot="suffix" name="bulb"></fwc-icon>
+        </fwc-drag-item>
+      </fwc-drag-container>
+      <fwc-tooltip content="This will submit your application to Marvel Authors!">
+        <fwc-button
           onclick="document.querySelector('#type_toast').trigger({type:'success', content: 'Application to become Avenger is successfully submitted!'})">
           Apply Now!
-        </fw-button>
-      </fw-tooltip>
+        </fwc-button>
+      </fwc-tooltip>
     </section>
 
-    <section class="fw-flex fw-flex-column" style="width:30rem;">
-      <fw-accordion expanded class="fw-mr-16 fw-type-base">
-        <fw-accordion-title>MCU's Avengers</fw-accordion-title>
-        <fw-accordion-body>
+    <section class="fwc-flex fwc-flex-column" style="width:30rem;">
+      <fwc-accordion expanded class="fwc-mr-16 fwc-type-base">
+        <fwc-accordion-title>MCU's Avengers</fwc-accordion-title>
+        <fwc-accordion-body>
           The Avengers are a fictional team of superheroes and the protagonists of the Marvel Cinematic Universe (MCU)
           media franchise, based on the Marvel Comics team of the same name created by Stan Lee and Jack Kirby in 1963.
           Founded by S.H.I.E.L.D. Director Nick Fury, the team is a United States-based organization composed primarily
@@ -100,16 +100,21 @@
           America and
           Thor, they are central to the MCU's Infinity Saga and have been acclaimed as an important part of the
           franchise.
-        </fw-accordion-body>
-      </fw-accordion>
+        </fwc-accordion-body>
+      </fwc-accordion>
     </section>
   </div>
 </body>
 
 
-<script async type="module" src="https://unpkg.com/@freshworks/crayons@v3/dist/crayons/crayons.esm.js">
+
+<script
+  type="module"
+  src="https://unpkg.com/@freshworks/crayons@2/dist/crayons/crayons.esm.js">
 </script>
-<script async nomodule src="https://unpkg.com/@freshworks/crayons@v3/dist/crayons/crayons.js">
+<script
+  nomodule
+  src="https://unpkg.com/@freshworks/crayons@2/dist/crayons/crayons.js">
 </script>
 
 </html>

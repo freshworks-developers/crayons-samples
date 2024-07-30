@@ -1,0 +1,94 @@
+<html>
+
+<head>
+  <title>A Crayons Freshdesk Sample</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script async src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
+</head>
+
+<body>
+  <div class="main">
+    <div class="one">
+      <form role="form" id="ticketForm">
+        <fwc-input placeholder="Enter Ticket Title" type="text" label="Title" id="title"></fwc-input>
+        <fwc-textarea placeholder="Enter ticket Description" id="desc"> </fwc-textarea>
+        <fwc-input placeholder="Enter your Email" type="email" label="Email" id="email"></fwc-input><br />
+        <fwc-label value="Single date picker" color="yellow"></fwc-label><br />
+        <div class="fwc-flex fwc-flex-row fwc-justify-center">
+          <fwc-datepicker id="date1"></fwc-datepicker>
+
+          <p class="fwc-m-16">
+            Pick your date.
+          </p>
+
+        </div>
+      </form>
+      <div class="fwc-flex fwc-flex-column fwc-justify-center">
+        <fwc-file-uploader id="file-uploader-1" text="Upload CSV" description="or drag and drop your csv file here"
+          hint="File size must be within 5MB" max-file-size="5" accept=".csv">
+        </fwc-file-uploader>
+        <br />
+        <fwc-button color="link" file-uploader-id="file-uploader-1">Upload file</fwc-button>
+        <br />
+        <br />
+      </div>
+      <fwc-button color="primary" id="createTicket">Create Ticket</fwc-button>
+      <fwc-button color="secondary" id="clearDetails">Clear</fwc-button>
+    </div>
+
+    <div class="two" style="max-height:15rem">
+      <fwc-data-table id="datatable" is-selectable="true" label="Data table 1"> </fwc-data-table>
+
+      <fwc-button modal-trigger-id="plot"> Plot </fwc-button>
+      <fwc-modal id="plot" title-text="Plot">
+        The series features comic fights between two lifelong enemies, a cat (Tom) and a mouse (Jerry). The plots of
+        each short usually center on Tom and Jerry's numerous attempts to have the best of each other and the mayhem
+        and destruction that follows.
+      </fwc-modal>
+    </div>
+
+    <div class="three">
+      <fwc-accordion expanded>
+        <fwc-accordion-title>Tom and Jerry</fwc-accordion-title>
+        <fwc-accordion-body>
+          Tom and Jerry is an American animated media franchise and series of comedy short films created in 1940 by
+          William Hanna and Joseph Barbera. Best known for its 161 theatrical short films by Metro-Goldwyn-Mayer, the
+          series centers on the rivalry between the titular characters of a cat named Tom and a mouse named Jerry.
+          Many shorts also feature several recurring characters.
+        </fwc-accordion-body>
+        <section>
+          <fwc-button-group label="Test">
+            <fwc-button id="button1" size="icon" color="secondary">
+              <fwc-icon name="reply" color="black"></fwc-icon>
+            </fwc-button>
+            <fwc-button id="button2" size="icon" color="secondary">
+              <fwc-icon name="chat-online" color="black"></fwc-icon>
+            </fwc-button>
+            <fwc-button id="button3" size="icon" color="secondary">
+              <fwc-icon name="more-horizontal" color="black"></fwc-icon>
+            </fwc-button>
+          </fwc-button-group>
+        </section>
+      </fwc-accordion>
+    </div>
+  </div>
+</body>
+
+
+<script src="scripts/app.js" defer></script>
+<script
+  type="module"
+  src="https://unpkg.com/@freshworks/crayons@2/dist/crayons/crayons.esm.js">
+</script>
+<script
+  nomodule
+  src="https://unpkg.com/@freshworks/crayons@2/dist/crayons/crayons.js">
+</script>
+<!-- <link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v3/css/crayons-min.css"
+/> -->
+</html>

@@ -1,0 +1,15 @@
+{
+  "FreshSales_api_key": {
+    "display_name": "FreshSales API Key",
+    "description": "Please enter your FreshSales API key. You can find it in the profile section page.",
+    "type": "text",
+    "required": true,
+    "secure": true
+  },
+  "FreshSales_subdomain": {
+    "display_name": "FreshSales Sub-domain",
+    "description": "Please enter your FreshSales sub-domain. It's in the URL, the name which appears before (.FreshSales.com) in the URL. For ex: In `xyz.FreshSales.com`, `xyz` is the subdomain",
+    "type": "url",
+    "required": true
+  }
+}

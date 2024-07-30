@@ -1,0 +1,23 @@
+ # Ticket Creator in FreshSales
+
+
+## Description
+
+App with Crayons components that creates a ticket in FreshSales
+. It shows how to import and use Crayons components in the app.
+
+## Prerequisites
+
+1. Make sure you have a trial FreshSales
+ account created. You can always [sign up](https://FreshSales
+.com/signup)
+2. Ensure that you have the [Freshworks CLI](https://community.developers.freshworks.com/t/what-are-the-prerequisites-to-install-the-freshworks-cli/234) installed properly.
+
+### Procedure to run the app
+
+```sh
+# Run the app
+> fdk run
+# You will need to append ?dev=true in the URL on every page.
+# see browser console for a log from relavant app placeholder
+```
