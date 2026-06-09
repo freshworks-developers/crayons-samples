@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crayons Component Catalog</title>
+    <script async src="{{{appclient}}}"></script>
+    <link rel="stylesheet" href="../styles/ticket-sidebar.css" />
+  </head>
+  <body>
+    <div class="catalog">
+      <header class="catalog__header">
+        <fw-icon name="palette" size="18" color="#2C5CC5"></fw-icon>
+        <div>
+          <h1 class="catalog__title">Crayons v4 Catalog</h1>
+          <p class="catalog__subtitle">Interactive demos for common UI components</p>
+        </div>
+      </header>
+
+      <fw-tabs id="category-tabs" active-tab-name="forms">
+        <fw-tab slot="tab" panel="forms">Forms</fw-tab>
+        <fw-tab slot="tab" panel="feedback">Feedback</fw-tab>
+        <fw-tab slot="tab" panel="layout">Layout</fw-tab>
+        <fw-tab slot="tab" panel="actions">Actions</fw-tab>
+
+        <fw-tab-panel name="forms">
+          <section class="demo">
+            <h2>fw-input</h2>
+            <p class="demo__desc">Single-line text field with label, placeholder, and validation states.</p>
+            <fw-input label="Ticket subject" placeholder="Enter subject" id="demo-input" clear-input></fw-input>
+          </section>
+
+          <section class="demo">
+            <h2>fw-textarea</h2>
+            <p class="demo__desc">Multi-line input for descriptions, notes, and long-form content.</p>
+            <fw-textarea label="Description" placeholder="Describe the issue" rows="3" id="demo-textarea"></fw-textarea>
+          </section>
+
+          <section class="demo">
+            <h2>fw-select</h2>
+            <p class="demo__desc">Dropdown for choosing one option from a predefined list.</p>
+            <fw-select label="Priority" placeholder="Select priority" id="demo-select">
+              <fw-select-option value="low">Low</fw-select-option>
+              <fw-select-option value="medium">Medium</fw-select-option>
+              <fw-select-option value="high">High</fw-select-option>
+              <fw-select-option value="urgent">Urgent</fw-select-option>
+            </fw-select>
+          </section>
+
+          <section class="demo">
+            <h2>fw-checkbox</h2>
+            <p class="demo__desc">Binary on/off control for optional settings and consent.</p>
+            <fw-checkbox id="demo-checkbox" checked>Notify assignee on update</fw-checkbox>
+          </section>
+
+          <section class="demo">
+            <h2>fw-radio-group</h2>
+            <p class="demo__desc">Mutually exclusive choices presented as a labeled radio set.</p>
+            <fw-radio-group name="channel" value="email" label="Contact channel" id="demo-radio">
+              <fw-radio value="email">Email</fw-radio>
+              <fw-radio value="phone">Phone</fw-radio>
+              <fw-radio value="chat">Chat</fw-radio>
+            </fw-radio-group>
+          </section>
+
+          <section class="demo">
+            <h2>fw-toggle</h2>
+            <p class="demo__desc">Switch control for enabling or disabling a feature at a glance.</p>
+            <div class="demo__row">
+              <span>Auto-assign on create</span>
+              <fw-toggle id="demo-toggle" checked></fw-toggle>
+            </div>
+          </section>
+
+          <section class="demo">
+            <h2>fw-datepicker</h2>
+            <p class="demo__desc">Calendar picker for due dates, follow-ups, and scheduling.</p>
+            <fw-datepicker id="demo-datepicker" display-format="MMM DD, YYYY"></fw-datepicker>
+          </section>
+        </fw-tab-panel>
+
+        <fw-tab-panel name="feedback">
+          <section class="demo">
+            <h2>fw-toast</h2>
+            <p class="demo__desc">Transient notification surfaced after an action completes.</p>
+            <fw-button id="show-toast" color="primary" size="small">Show success toast</fw-button>
+            <fw-toast id="demo-toast" timeout="3000"></fw-toast>
+          </section>
+
+          <section class="demo">
+            <h2>fw-spinner</h2>
+            <p class="demo__desc">Loading indicator shown while async work is in progress.</p>
+            <div class="demo__row">
+              <fw-button id="simulate-load" color="secondary" size="small">Simulate load</fw-button>
+              <fw-spinner id="demo-spinner" size="medium" hidden></fw-spinner>
+              <span id="load-status" class="demo__hint">Idle</span>
+            </div>
+          </section>
+
+          <section class="demo">
+            <h2>fw-skeleton</h2>
+            <p class="demo__desc">Placeholder shimmer while content is fetched from an API.</p>
+            <div class="skeleton-stack" id="skeleton-area">
+              <fw-skeleton width="80%" height="14px"></fw-skeleton>
+              <fw-skeleton width="100%" height="14px"></fw-skeleton>
+              <fw-skeleton width="60%" height="14px"></fw-skeleton>
+            </div>
+            <fw-button id="toggle-skeleton" color="text" size="small">Toggle skeleton</fw-button>
+          </section>
+
+          <section class="demo">
+            <h2>fw-label</h2>
+            <p class="demo__desc">Compact status badge for tags, states, and metadata.</p>
+            <div class="demo__row demo__row--wrap">
+              <fw-label value="Open" color="blue"></fw-label>
+              <fw-label value="Pending" color="yellow"></fw-label>
+              <fw-label value="Resolved" color="green"></fw-label>
+              <fw-label value="Escalated" color="red"></fw-label>
+            </div>
+          </section>
+        </fw-tab-panel>
+
+        <fw-tab-panel name="layout">
+          <section class="demo">
+            <h2>fw-tabs</h2>
+            <p class="demo__desc">Organize related content into switchable panels without page navigation.</p>
+            <fw-tabs id="nested-tabs" active-tab-name="overview">
+              <fw-tab slot="tab" panel="overview">Overview</fw-tab>
+              <fw-tab slot="tab" panel="details">Details</fw-tab>
+              <fw-tab-panel name="overview">
+                <p class="demo__panel-text">Overview panel — summary metrics and quick actions.</p>
+              </fw-tab-panel>
+              <fw-tab-panel name="details">
+                <p class="demo__panel-text">Details panel — extended fields and audit history.</p>
+              </fw-tab-panel>
+            </fw-tabs>
+          </section>
+
+          <section class="demo">
+            <h2>fw-popover</h2>
+            <p class="demo__desc">Floating panel anchored to a trigger for contextual actions or info.</p>
+            <fw-popover id="demo-popover" same-width="false">
+              <fw-button slot="popover-trigger" color="secondary" size="small">Open popover</fw-button>
+              <div class="popover-body">
+                <p>Assign this ticket to the billing queue or escalate to tier 2.</p>
+              </div>
+            </fw-popover>
+          </section>
+
+          <section class="demo">
+            <h2>fw-tooltip</h2>
+            <p class="demo__desc">Hover hint for icons and controls that need a short explanation.</p>
+            <fw-tooltip content="Marks the ticket as VIP for priority routing">
+              <fw-button color="link" size="small">VIP ticket</fw-button>
+            </fw-tooltip>
+          </section>
+        </fw-tab-panel>
+
+        <fw-tab-panel name="actions">
+          <section class="demo">
+            <h2>fw-button</h2>
+            <p class="demo__desc">Primary actions, secondary options, and low-emphasis text links.</p>
+            <div class="demo__row demo__row--wrap">
+              <fw-button color="primary">Primary</fw-button>
+              <fw-button color="secondary">Secondary</fw-button>
+              <fw-button color="danger">Danger</fw-button>
+              <fw-button color="link">Link</fw-button>
+              <fw-button color="text">Text</fw-button>
+            </div>
+            <div class="demo__row demo__row--wrap">
+              <fw-button color="primary" size="small">Small</fw-button>
+              <fw-button color="primary" loading>Loading</fw-button>
+              <fw-button color="primary" disabled>Disabled</fw-button>
+            </div>
+          </section>
+        </fw-tab-panel>
+      </fw-tabs>
+    </div>
+
+    <script async type="module" src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
+    <script async nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
+    <script defer src="../scripts/ticket-sidebar.js"></script>
+  </body>
+</html>
