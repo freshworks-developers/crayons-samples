@@ -1,0 +1,10 @@
+{
+  "default_theme": {
+    "display_name": "Default dashboard theme",
+    "description": "Theme applied when an admin first opens PulseOps",
+    "type": "dropdown",
+    "options": ["light", "dark", "midnight"],
+    "default_value": "light",
+    "required": false
+  }
+}
