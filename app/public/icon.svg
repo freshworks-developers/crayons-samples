@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PulseOps">
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="PulseOps">
   <rect width="64" height="64" rx="12" fill="#2c5cc5"/>
   <path d="M16 40 L24 28 L32 36 L40 22 L48 40 Z" fill="#ffffff"/>
   <circle cx="48" cy="20" r="4" fill="#7c5cff"/>

@@ -1,17 +1,63 @@
 {
   "platform-version": "3.0",
+  "metaConfig": {
+    "framework": "react"
+  },
   "modules": {
+    "common": {
+      "location": {
+        "full_page_app": {
+          "url": "index.html",
+          "icon": "icon.svg"
+        },
+        "cti_global_sidebar": {
+          "url": "ctiGlobalSidebar.html",
+          "icon": "icon.svg"
+        }
+      }
+    },
     "support_ticket": {
       "location": {
         "ticket_sidebar": {
-          "url": "views/ticket-sidebar.html",
-          "icon": "styles/images/icon.svg"
+          "url": "ticketSidebar.html",
+          "icon": "icon.svg"
+        },
+        "ticket_top_navigation": {
+          "url": "ticketTopNav.html",
+          "icon": "icon.svg"
+        }
+      }
+    },
+    "support_contact": {
+      "location": {
+        "contact_sidebar": {
+          "url": "contactSidebar.html",
+          "icon": "icon.svg"
+        }
+      }
+    },
+    "support_company": {
+      "location": {
+        "company_background": {
+          "url": "companySidebar.html",
+          "icon": "icon.svg"
+        }
+      }
+    },
+    "service_ticket": {
+      "location": {
+        "ticket_sidebar": {
+          "url": "ticketSidebarService.html",
+          "icon": "icon.svg"
         }
       }
     }
   },
   "engines": {
-    "node": "24.11.0",
+    "node": "24.11.1",
     "fdk": "10.1.2"
+  },
+  "scripts": {
+    "fdk-unit-test": "vitest run --coverage"
   }
 }

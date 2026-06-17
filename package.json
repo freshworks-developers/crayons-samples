@@ -1,0 +1,24 @@
+{
+  "name": "pulseops-crayons-samples",
+  "version": "1.0.0",
+  "description": "PulseOps — unified Crayons v4 React Meta sample for Freshworks global apps",
+  "dependencies": {
+    "@freshworks/crayons": "^4.2.0",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
+    "react-router-dom": "^6.22.3"
+  },
+  "scripts": {
+    "test": "vitest run --coverage",
+    "fdk-unit-test": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "~7.24.0",
+    "@babel/preset-react": "~7.23.3",
+    "@testing-library/react": "~14.2.1",
+    "@vitest/coverage-v8": "~2.1.8",
+    "identity-obj-proxy": "~3.0.0",
+    "jsdom": "~26.1.0",
+    "vitest": "~2.1.8"
+  }
+}
